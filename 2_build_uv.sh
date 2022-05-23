@@ -16,6 +16,7 @@ fi
 
 if [ ! -e libuv-1.43.0.zip ] ;then
     echo "Please download libuv at https://github.com/libuv/libuv.git"
+    exit 1
 fi
 
 if [ ! -e $TARGET_BUILD_DIR ] ; then
