@@ -26,7 +26,8 @@ enum OclVendor : unsigned {
     OCL_VENDOR_AMD,
     OCL_VENDOR_NVIDIA,
     OCL_VENDOR_INTEL,
-    OCL_VENDOR_APPLE
+    OCL_VENDOR_APPLE,
+    OCL_VENDOR_QUALCOMM,
 };
 
 

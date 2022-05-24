@@ -59,6 +59,11 @@ static OclVendor getPlatformVendorId(const String &vendor, const String &extensi
         return OCL_VENDOR_APPLE;
     }
 
+    if (extensions.contains("cl_qcom_") || vendor.contains("QUALCOMM")) {
+        return OCL_VENDOR_QUALCOMM;
+    }
+
+
     return OCL_VENDOR_UNKNOWN;
 }
 
@@ -80,6 +85,11 @@ static OclVendor getVendorId(const String &vendor)
     if (vendor.contains("Apple")) {
         return OCL_VENDOR_APPLE;
     }
+
+    if (vendor.contains("QUALCOMM")) {
+        return OCL_VENDOR_QUALCOMM;
+    }
+
 
     return OCL_VENDOR_UNKNOWN;
 }

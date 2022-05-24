@@ -26,6 +26,12 @@ int main()
 	aocl::OclPlatform platform = platforms[0];
 	std::vector<aocl::OclDevice> devices = platform.devices();
 	aocl::OclDevice  device = devices[0];
+    LOG_INFO(TAG "Device id 0x%x",device.id());
+    LOG_INFO(TAG "Device board %s",device.board().data());
+    LOG_INFO(TAG "Device name %s",device.name().data());
+    LOG_INFO(TAG "Device vendor %s",device.vendor().data());
+    LOG_INFO(TAG "Device vendorId %d",device.vendorId());
+    LOG_INFO(TAG "Device id 0x%x extensions:%s",device.id(),device.extensions().data());
 	std::vector<cl_device_id> ids = { device.id() };
         cl_context m_ctx = aocl::OclLib::createContext(ids);
 	cl_command_queue command_queue = NULL;
